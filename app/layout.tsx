@@ -15,7 +15,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="antialiased">{children}</body>
+        <body className="antialiased bg-background min-h-screen relative">
+          <div className="fixed inset-0 bg-gradient-to-br from-primary/3 via-transparent to-secondary/3 pointer-events-none" />
+          <div className="relative z-10">{children}</div>
+        </body>
       </html>
     </ClerkProvider>
   );
