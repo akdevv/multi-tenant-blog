@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: dbadmin
+      POSTGRES_PASSWORD: K9mX7pQ2vL8nR4wE6tY1uI3oP5sA9cF0
+      POSTGRES_DB: multi_tenant_db
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
